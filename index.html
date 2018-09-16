@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>TripZero iFrame Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    background: #eee;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .header--global {
+    background: #ddd;
+    padding: 0.5rem 1rem;
+  }
+  .header--global h1 {
+    margin: 0 0 1rem 0;
+  }
+  .footer--global {
+    background-color: #ddd;
+    padding: 2rem 1rem;
+  }
+  .footer--global p {
+    margin: 0;
+  }
+  </style>
+</head>
+<body>
+
+<header class="header--global">
+  <div class="container">
+    <h1 class="logo">Logo</h1>
+    <nav class="nav--global">
+      <a href="#" class="nav-link">Nav Link 1</a>
+      <a href="#" class="nav-link">Nav Link 2</a>
+      <a href="#" class="nav-link">Nav Link 3</a>
+    </nav>
+  </div>
+</header>
+
+<iframe id="tzFrame" src="https://www.netimpact.io/sandbox/iframe-page" style="border:none; width: 1px; min-width: 100%;" scrolling="no"></iframe>
+
+<footer class="footer--global">
+  <div class="container">
+    <p>This is the footer.</p>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.1/iframeResizer.min.js"></script>
+<script type="text/javascript">iFrameResize({log:true, heightCalculationMethod:'taggedElement'}, 'iframe')</script>
+</body>
+</html>
